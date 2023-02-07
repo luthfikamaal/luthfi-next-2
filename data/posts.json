@@ -1,0 +1,12 @@
+[
+  { "id": 1, "title": "First post", "content": "This is the first post.", "author": "John Doe", "date": "2022-01-01" },
+  { "id": 2, "title": "Second post", "content": "This is the second post.", "author": "Jane Doe", "date": "2022-01-02" },
+  { "id": 3, "title": "Third post", "content": "This is the third post.", "author": "John Doe", "date": "2022-01-03" },
+  { "id": 4, "title": "Fourth post", "content": "This is the fourth post.", "author": "Jane Doe", "date": "2022-01-04" },
+  { "id": 5, "title": "Fifth post", "content": "This is the fifth post.", "author": "John Doe", "date": "2022-01-05" },
+  { "id": 6, "title": "Sixth post", "content": "This is the sixth post.", "author": "Jane Doe", "date": "2022-01-06" },
+  { "id": 7, "title": "Seventh post", "content": "This is the seventh post.", "author": "John Doe", "date": "2022-01-07" },
+  { "id": 8, "title": "Eighth post", "content": "This is the eighth post.", "author": "Jane Doe", "date": "2022-01-08" },
+  { "id": 9, "title": "Ninth post", "content": "This is the ninth post.", "author": "John Doe", "date": "2022-01-09" },
+  { "id": 10, "title": "Tenth post", "content": "This is the tenth post.", "author": "Jane Doe", "date": "2022-01-10" }
+]
