@@ -9,6 +9,7 @@ const Layout = ({ children, title, description }) => {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <meta name="description" content={description} />
       </Head>
       <Navbar className="z-[999]" />
       <main className="px-5 py-16 mx-auto animate" style={{ maxWidth: '1100px' }}>
