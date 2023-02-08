@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Blog = () => {
   return (
     <>
-      <Layout title={'Blog'} description={'my journey in web development: small notes along the way'}>
+      <Layout title={'Blog'} description={'my journey in web development: small notes along the way'} thumbnail={'/assets/thumbnails/blog.png'}>
         <div className="mt-16">
           <div className="mb-4">
             <h1 className="text-4xl mb-1 font-semibold text-white">Blog</h1>

@@ -8,7 +8,7 @@ const ShowProject = ({ project }) => {
 
   return (
     <>
-      <Layout title={project.name}>
+      <Layout title={project.name} description={project.description} thumbnail={project.img}>
         <div className="mt-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="w-full">
