@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Now = () => {
   return (
     <>
-      <Layout title={'Now'} description={"what i'm doing now"} thumbnail={'/assets/thumbnails/now.png'}>
+      <Layout title={'Now'} description={"what i'm doing now"} thumbnail={'https://luthfikamal-2.vercel.app/assets/thumbnails/now.png'}>
         <div className="mt-16">
           <div className="mb-4">
             <h1 className="text-4xl mb-1 font-semibold text-white">Now</h1>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Projects = () => {
   return (
     <>
-      <Layout title={'Projects'} description={'my recent projects'} thumbnail={'/assets/thumbnails/projects.png'}>
+      <Layout title={'Projects'} description={'my recent projects'} thumbnail={'https://luthfikamal-2.vercel.app/assets/thumbnails/projects.png'}>
         <div className="mt-16">
           <div className="mb-4">
             <h1 className="text-4xl mb-1 font-semibold text-white">Projects</h1>
