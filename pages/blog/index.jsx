@@ -1,8 +1,10 @@
 import Layout from '../../layouts/Layout';
-import posts from '../../data/posts.json';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   return (
     <>
       <Layout title={'Blog'} description={'my journey in web development: small notes along the way'} thumbnail={'https://luthfikamal-2.vercel.app/assets/thumbnails/blog.png'}>
@@ -16,12 +18,10 @@ const Blog = () => {
           <hr />
           <div className="mb-3 pt-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-5">
-              {posts.map(({ id, title, author, date }) => (
-                <div className="border-l-[2px] border-solid border-[#09bc8a] pl-3 text-2xl text-white" key={id}>
-                  <Link href={`/blog/${id}`}>{title}</Link>
-                  <p className="text-sm text-white">
-                    {author} - {date}
-                  </p>
+              {posts.map(({ slug, title, date }) => (
+                <div className="border-l-[2px] border-solid border-[#09bc8a] pl-3 text-2xl text-white" key={slug}>
+                  <Link href={`/blog/${slug}`}>{title}</Link>
+                  <p className="text-sm text-white">{date}</p>
                 </div>
               ))}
             </div>
@@ -30,6 +30,26 @@ const Blog = () => {
       </Layout>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const files = fs.readdirSync(path.join('posts'));
+
+  const posts = files.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
+    const { data: frontMatter } = matter(markdownWithMeta);
+
+    return {
+      ...frontMatter,
+      slug: filename.split('.')[0],
+    };
+  });
+
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default Blog;
