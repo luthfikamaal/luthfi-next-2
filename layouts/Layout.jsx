@@ -11,6 +11,7 @@ const Layout = ({ children, title, description, thumbnail }) => {
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
         <meta property="og:image" content={thumbnail} />
+        <meta name="google" content="notranslate" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@luthfikml_" />
         <meta name="twitter:creator" content="@luthfikml_" />
