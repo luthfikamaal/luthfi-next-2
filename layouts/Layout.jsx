@@ -10,7 +10,8 @@ const Layout = ({ children, title, description, thumbnail }) => {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
-        <meta property="og:image" content={thumbnail} />
+        <meta property="og:image" itemprop="image" content={thumbnail} />
+        <meta property="og:site_name" content={pageTitle} />
         <meta name="google" content="notranslate" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@luthfikml_" />
