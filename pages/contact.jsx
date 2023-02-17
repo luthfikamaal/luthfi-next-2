@@ -54,7 +54,7 @@ const Contact = () => {
                     <td>Twitter</td>
                     <td>
                       <a href="https://twitter.com/luthfikml_" className="underline" target={'_blank'}>
-                        luthfikml_
+                        @luthfikml_
                       </a>
                     </td>
                   </tr>
