@@ -36,7 +36,7 @@ const Now = () => {
                   <li>- membaca buku,</li>
                   <li>
                     - menulis{' '}
-                    <Link href={'/posts'} className="text-primary underline transition-all">
+                    <Link href={'/blog'} className="text-primary underline transition-all">
                       blog
                     </Link>
                     , dan
