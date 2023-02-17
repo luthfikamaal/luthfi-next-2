@@ -58,38 +58,33 @@ const Navbar = () => {
           </li>
           <li>
             <button onClick={showNavModal} className="block sm:hidden px-3 py-2 rounded-lg hover:bg-white/10">
-              <i className="bi bi-list text-white"></i>
+              {!isShow ? <i className="animation-button-open-modal bi bi-list text-white"></i> : <i className="animation-button-open-modal bi bi-x-circle-fill text-white"></i>}
             </button>
           </li>
         </ul>
       </nav>
       {isShow && (
-        <div className={isShow ? 'h-screen fixed z-[1001] bg-secondary w-full backdrop-blur-md animation-open-modal' : 'h-screen fixed z-[1001] bg-secondary w-full backdrop-blur-md animation-close-modal'}>
-          <div className="px-5 py-4 flex">
-            <button className="ml-auto px-3 py-2 rounded-lg hover:bg-white/10" onClick={showNavModal}>
-              <i className="bi bi-x-circle-fill text-white"></i>
-            </button>
-          </div>
-          <div className="px-5 py-4">
+        <div className="w-1/3 right-5 border border-primary border-solid rounded-lg fixed z-[1001] bg-secondary animation-open-modal top-20">
+          <div className="px-4 py-4">
             <div className="grid grid-cols-1 gap-4">
-              <Link href={'/now'} className="border border-solid rounded-xl flex px-6 py-5 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/now'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
                 <div>
-                  <h1 className="text-center text-xl text-white">Now</h1>
+                  <h1 className="text-center text-lg text-white">Now</h1>
                 </div>
               </Link>
-              <Link href={'/projects'} className="border border-solid rounded-xl flex px-6 py-5 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/projects'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
                 <div>
-                  <h1 className="text-center text-xl text-white">Projects</h1>
+                  <h1 className="text-center text-lg text-white">Projects</h1>
                 </div>
               </Link>
-              <Link href={'/blog'} className="border border-solid rounded-xl flex px-6 py-5 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/blog'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
                 <div>
-                  <h1 className="text-center text-xl text-white">Blog</h1>
+                  <h1 className="text-center text-lg text-white">Blog</h1>
                 </div>
               </Link>
-              <Link href={'/contact'} className="border border-solid rounded-xl flex px-6 py-5 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/contact'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
                 <div>
-                  <h1 className="text-center text-xl text-white">Contact</h1>
+                  <h1 className="text-center text-lg text-white">Contact</h1>
                 </div>
               </Link>
             </div>

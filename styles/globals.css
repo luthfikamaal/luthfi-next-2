@@ -64,6 +64,22 @@
     }
   }
 
+  .animation-button-open-modal {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideInFromTop 1s forwards;
+  }
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .animation-close-modal {
     opacity: 1;
     transform: translateX(0);
