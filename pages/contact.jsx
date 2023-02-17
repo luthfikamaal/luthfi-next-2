@@ -12,6 +12,64 @@ const Contact = () => {
             </p>
           </div>
           <hr />
+          <div className="mb-3 pt-3">
+            <div className="mb-6 text-white">
+              <div className="mb-3">
+                <table className="w-auto text-left">
+                  <thead>
+                    <tr>
+                      <th width="120">Contact</th>
+                      <th>Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Email</td>
+                      <td>
+                        <a href="mailto:luthfikamal13@gmail.com" className="underline">
+                          luthfikamal13@gmail.com
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <table className="w-auto text-left">
+                <thead>
+                  <tr>
+                    <th width="120">Social Media</th>
+                    <th>Detail</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Instagram</td>
+                    <td>
+                      <a href="https://instagram.com/luthfikml_" className="underline" target={'_blank'}>
+                        luthfikml_
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Twitter</td>
+                    <td>
+                      <a href="https://twitter.com/luthfikml_" className="underline" target={'_blank'}>
+                        luthfikml_
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>LinkedIn</td>
+                    <td>
+                      <a href="https://linkedin.com/in/luthfikamaal" className="underline" target={'_blank'}>
+                        Muhammad Luthfi Kamal
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </Layout>
     </>

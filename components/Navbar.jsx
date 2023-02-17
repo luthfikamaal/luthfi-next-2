@@ -58,7 +58,7 @@ const Navbar = () => {
           </li>
           <li>
             <button onClick={showNavModal} className="block sm:hidden px-3 py-2 rounded-lg hover:bg-white/10">
-              {!isShow ? <i className="animation-button-open-modal bi bi-list text-white"></i> : <i className="animation-button-open-modal bi bi-x-circle-fill text-white"></i>}
+              {!isShow ? <i className="bi bi-list text-white"></i> : <i className="bi bi-x-circle-fill text-white"></i>}
             </button>
           </li>
         </ul>

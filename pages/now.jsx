@@ -14,7 +14,7 @@ const Now = () => {
           </div>
           <hr />
           <div className="mb-3 pt-3 text-white">
-            <div className=" mb-6">
+            <div className="mb-6">
               Terinspirasi dari mas{' '}
               <a href="https://www.wahudamon.com/" target="_blank" className="text-primary underline transition-all">
                 Afwa Bagas Wahuda
