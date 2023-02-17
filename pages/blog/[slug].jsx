@@ -13,7 +13,8 @@ const ReadPost = ({ frontMatter: { title, date, tags, excerpt }, mdxSource }) =>
           <div className="mb-4">
             <div className="mb-3">
               <h1 className="text-4xl mb-1 font-semibold text-white">{title}</h1>
-              <p className="text-white">{date}</p>
+              <p className="text-white mb-1">{excerpt}</p>
+              <p className="text-white italic text-sm">{date}</p>
             </div>
             <hr />
             <div id="mdx" className="pt-3">
