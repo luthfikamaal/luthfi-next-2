@@ -64,26 +64,26 @@ const Navbar = () => {
         </ul>
       </nav>
       {isShow && (
-        <div className="w-[150px] right-5 border border-primary border-solid rounded-2xl fixed z-[1001] bg-secondary animation-open-modal top-20">
+        <div className="w-full h-screen border border-primary border-solid rounded-2xl fixed z-[1001] bg-secondary animation-open-modal top-16">
           <div className="px-4 py-4">
             <div className="grid grid-cols-1 gap-4">
               <Link href={'/now'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
-                <div>
+                <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Now</h1>
                 </div>
               </Link>
               <Link href={'/projects'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
-                <div>
+                <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Projects</h1>
                 </div>
               </Link>
               <Link href={'/blog'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
-                <div>
+                <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Blog</h1>
                 </div>
               </Link>
               <Link href={'/contact'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
-                <div>
+                <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Contact</h1>
                 </div>
               </Link>
