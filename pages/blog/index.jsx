@@ -5,6 +5,8 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const Blog = ({ posts }) => {
+  posts.sort((a, b) => a.nomor - b.nomor);
+
   return (
     <>
       <Layout title={'Blog'} description={'my journey in web development: small notes along the way'} thumbnail={'https://luthfikamal-2.vercel.app/assets/thumbnails/blog.png'}>
