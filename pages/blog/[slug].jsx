@@ -5,10 +5,10 @@ import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 
-const ReadPost = ({ frontMatter: { title, date, tags, excerpt }, mdxSource }) => {
+const ReadPost = ({ frontMatter: { title, date, tags, excerpt, image }, mdxSource }) => {
   return (
     <>
-      <Layout title={title} description={excerpt} thumbnail={'https://luthfikamal-2.vercel.app/assets/thumbnails/blog.png'}>
+      <Layout title={title} description={excerpt} thumbnail={`https://luthfikamal-2.vercel.app/assets/thumbnails/blog/${image}`}>
         <div className="mt-16">
           <div className="mb-4">
             <div className="mb-3">
