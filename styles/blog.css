@@ -53,6 +53,10 @@ h6 {
   font-size: 14px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #mdx p code {
   padding: 1px 3px;
   background-color: #eaeaea;

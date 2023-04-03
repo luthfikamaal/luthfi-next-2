@@ -1,6 +1,7 @@
 import Layout from '../../layouts/Layout';
 import projects from '../../data/projects.json';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Projects = () => {
   return (
