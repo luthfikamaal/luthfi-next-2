@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const Blog = ({ posts }) => {
-  posts.sort((a, b) => a.nomor - b.nomor);
+  posts.sort((a, b) => b.nomor - a.nomor);
 
   return (
     <>

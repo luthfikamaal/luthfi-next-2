@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
-import remarkHighlight from 'remark-highlight.js';
 
 const ReadPost = ({ frontMatter: { title, date, tags, excerpt, image }, mdxSource }) => {
   return (
