@@ -53,5 +53,16 @@
     "img": "https://blogger.googleusercontent.com/img/a/AVvXsEiZ70eUOzgKjrEkMPk9-W_oCVUcMB9qYzAQ92PxsZEc7FwUVwuahQ2O_YmxH_u7HiXyc9Rx75gIUGFVNEaB-BZb32HFnvlq14tyacYb_9YzKyxP_qyxaNAo_I2AIqYjyT5EbPVie0xdv9mW7o7gw75guMkdaaVy6r9VBVgY1pPiOuRW5CusV8AV5tPL-g",
     "stacks": "Vue, Sport DB, TailwindCSS",
     "type": "Personal Project"
+  },
+  {
+    "name": "Simple Quran API",
+    "slug": "quran-api",
+    "url": {
+      "github": "https://github.com/luthfikamaal/simple-quran-api",
+      "website": "https://quran-api-lk.vercel.app/api"
+    },
+    "img": "https://luthfikamal-2.vercel.app/assets/portfolio/quran-api.png",
+    "stacks": "Express",
+    "type": "Personal Project"
   }
 ]
