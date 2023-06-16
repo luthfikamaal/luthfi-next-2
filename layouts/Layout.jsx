@@ -10,7 +10,7 @@ const Layout = ({ children, title, description, thumbnail }) => {
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="Muhammad Luthfi Kamal, Luthfi, Kamal, LuthfiK, luthfikamal, luthfikamal-2, frontend, backend, developer, web developer" />
+        <meta name="keywords" content="muhammad luthfi kamal, luthfi, kamal, luthfik, luthfikamal, luthfikamal-2, frontend, backend, developer, web developer" />
         <meta property="og:image" itemprop="image" content={thumbnail} />
         <meta property="og:site_name" content={pageTitle} />
         <meta property="og:description" content={description} />
