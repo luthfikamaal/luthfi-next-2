@@ -8,7 +8,7 @@ const Navbar = () => {
   const router = useRouter();
 
   const showNavModal = () => {
-    setIsShow(isShow ? false : true);
+    setIsShow(!isShow);
   };
 
   useEffect(() => {
@@ -64,25 +64,25 @@ const Navbar = () => {
         </ul>
       </nav>
       {isShow && (
-        <div className="w-full h-screen border border-primary border-solid rounded-2xl fixed z-[1001] bg-secondary animation-open-modal top-16">
-          <div className="px-4 py-4">
-            <div className="grid grid-cols-1 gap-4">
-              <Link href={'/now'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
+        <div className="border border-primary border-solid rounded-2xl fixed z-[1001] bg-secondary animation-open-modal top-20 right-6">
+          <div className="px-2 py-2">
+            <div className="grid grid-cols-1 gap-2">
+              <Link href={'/now'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary link-nav">
                 <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Now</h1>
                 </div>
               </Link>
-              <Link href={'/projects'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/projects'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary link-nav">
                 <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Projects</h1>
                 </div>
               </Link>
-              <Link href={'/blog'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/blog'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary link-nav">
                 <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Blog</h1>
                 </div>
               </Link>
-              <Link href={'/contact'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary">
+              <Link href={'/contact'} className="border border-solid rounded-xl flex px-4 py-3 border-[#09bc8a] hover:bg-primary link-nav">
                 <div onClick={showNavModal}>
                   <h1 className="text-center text-lg text-white">Contact</h1>
                 </div>
