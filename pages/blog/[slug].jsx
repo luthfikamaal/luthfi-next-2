@@ -4,11 +4,13 @@ import fs from 'fs';
 import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import rehypeHighlight from 'rehype-highlight';
 
 const ReadPost = ({ frontMatter: { title, date, tags, excerpt, image }, mdxSource }) => {
   return (
     <>
       <Layout title={title} description={excerpt} thumbnail={`https://luthfikamal-2.vercel.app/assets/thumbnails/blog/${image}`}>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css" />
         <div className="mt-16">
           <div className="mb-4">
             <div className="mb-3">
@@ -53,7 +55,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8');
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
-  const mdxSource = await serialize(content);
+  const mdxSource = await serialize(content, {
+    mdxOptions: { rehypePlugins: [rehypeHighlight] },
+  });
 
   return {
     props: {

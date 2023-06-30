@@ -11,6 +11,12 @@ const Layout = ({ children, title, description, thumbnail }) => {
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="muhammad luthfi kamal, luthfi, kamal, luthfik, luthfikamal, luthfikamal-2, frontend, backend, developer, web developer" />
+        <meta name="robots" content="index, follow" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="LuthfiKamal" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://luthfikamal-2.vercel.app/" />
         <meta property="og:image" itemprop="image" content={thumbnail} />
         <meta property="og:site_name" content={pageTitle} />
         <meta property="og:description" content={description} />

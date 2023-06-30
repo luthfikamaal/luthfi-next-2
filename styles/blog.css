@@ -43,11 +43,9 @@ h6 {
 }
 
 #mdx pre {
-  padding: 10px;
   border-radius: 8px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: #112331;
   color: rgb(238, 238, 238);
   overflow-x: scroll;
   font-size: 14px;
