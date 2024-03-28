@@ -1,4 +1,15 @@
 [
+  { 
+    "name":"Kuliah Matematika",
+    "slug":"kuliah-matematika",
+    "url":{
+      "github":"#",
+      "website":"https://kuliahmatematika.online"
+    },
+    "img":"https://luthfikamal-2.vercel.app/assets/portfolio/kuliah-matematika.png",
+    "stacks":"Laravel",
+    "type":"Freelance Project"
+  },
   {
     "name": "Gebyar Matematika UIN Sunan Kalijaga",
     "slug": "gebyar-matematika-uin-sunan-kalijaga-website",
