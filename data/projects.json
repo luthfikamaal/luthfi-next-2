@@ -1,14 +1,25 @@
 [
-  { 
-    "name":"Kuliah Matematika",
-    "slug":"kuliah-matematika",
-    "url":{
-      "github":"#",
-      "website":"https://kuliahmatematika.online"
+  {
+    "name": "Quiz App",
+    "slug": "quiz-app",
+    "url": {
+      "github": "#",
+      "website": "https://quizin.vercel.app"
     },
-    "img":"https://luthfikamal-2.vercel.app/assets/portfolio/kuma.png",
-    "stacks":"Laravel",
-    "type":"Freelance Project"
+    "img": "https://luthfikamal-2.vercel.app/assets/portfolio/quiz-app.png",
+    "stacks": "Next.js",
+    "type": "Personal Project"
+  },
+  {
+    "name": "Kuliah Matematika",
+    "slug": "kuliah-matematika",
+    "url": {
+      "github": "#",
+      "website": "https://kuliahmatematika.online"
+    },
+    "img": "https://luthfikamal-2.vercel.app/assets/portfolio/kuma.png",
+    "stacks": "Laravel",
+    "type": "Freelance Project"
   },
   {
     "name": "Gebyar Matematika UIN Sunan Kalijaga",
