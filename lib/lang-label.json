@@ -1,0 +1,142 @@
+[
+  {
+    "original": "javascript",
+    "edited": "Javascript"
+  },
+  {
+    "original": "php",
+    "edited": "PHP"
+  },
+  {
+    "original": "python",
+    "edited": "Python"
+  },
+  {
+    "original": "json",
+    "edited": "JSON"
+  },
+  {
+    "original": "bash",
+    "edited": "Bash"
+  },
+  {
+    "original": "html",
+    "edited": "HTML"
+  },
+  {
+    "original": "css",
+    "edited": "CSS"
+  },
+  {
+    "original": "ruby",
+    "edited": "Ruby"
+  },
+  {
+    "original": "java",
+    "edited": "Java"
+  },
+  {
+    "original": "c",
+    "edited": "C"
+  },
+  {
+    "original": "c++",
+    "edited": "C++"
+  },
+  {
+    "original": "c#",
+    "edited": "C#"
+  },
+  {
+    "original": "swift",
+    "edited": "Swift"
+  },
+  {
+    "original": "kotlin",
+    "edited": "Kotlin"
+  },
+  {
+    "original": "typescript",
+    "edited": "TypeScript"
+  },
+  {
+    "original": "go",
+    "edited": "Go"
+  },
+  {
+    "original": "r",
+    "edited": "R"
+  },
+  {
+    "original": "perl",
+    "edited": "Perl"
+  },
+  {
+    "original": "scala",
+    "edited": "Scala"
+  },
+  {
+    "original": "dart",
+    "edited": "Dart"
+  },
+  {
+    "original": "shell",
+    "edited": "Shell"
+  },
+  {
+    "original": "sql",
+    "edited": "SQL"
+  },
+  {
+    "original": "typescript",
+    "edited": "TypeScript"
+  },
+  {
+    "original": "elixir",
+    "edited": "Elixir"
+  },
+  {
+    "original": "rust",
+    "edited": "Rust"
+  },
+  {
+    "original": "matlab",
+    "edited": "MATLAB"
+  },
+  {
+    "original": "haskell",
+    "edited": "Haskell"
+  },
+  {
+    "original": "lua",
+    "edited": "Lua"
+  },
+  {
+    "original": "vb.net",
+    "edited": "VB.NET"
+  },
+  {
+    "original": "assembly",
+    "edited": "Assembly"
+  },
+  {
+    "original": "objective-c",
+    "edited": "Objective-C"
+  },
+  {
+    "original": "fortran",
+    "edited": "Fortran"
+  },
+  {
+    "original": "sas",
+    "edited": "SAS"
+  },
+  {
+    "original": "cobol",
+    "edited": "COBOL"
+  },
+  {
+    "original": "groovy",
+    "edited": "Groovy"
+  }
+]

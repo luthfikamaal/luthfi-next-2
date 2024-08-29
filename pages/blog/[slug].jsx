@@ -5,8 +5,42 @@ import path from 'path';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import rehypeHighlight from 'rehype-highlight';
+import { visit } from 'unist-util-visit';
+import langLabels from '../../lib/lang-label.json';
+import { useEffect } from 'react';
 
 const ReadPost = ({ frontMatter: { title, date, tags, excerpt, image }, mdxSource }) => {
+  const handleCopy = (e) => {
+    const codeToCopy = e.target.getAttribute('data-code');
+
+    navigator.clipboard
+      .writeText(codeToCopy)
+      .then(() => {
+        // Menambahkan ikon "checklist" sebelum teks "Copied!"
+        e.target.innerHTML = '<i class="bi bi-clipboard2-check-fill "></i> Copied!';
+
+        setTimeout(() => {
+          // Mengembalikan teks menjadi "Copy" dengan ikon clipboard
+          e.target.innerHTML = '<i class="bi bi-clipboard "></i> Copy';
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error('Failed to copy code:', err);
+      });
+  };
+
+  useEffect(() => {
+    document.querySelectorAll('.copy-button').forEach((button) => {
+      button.addEventListener('click', handleCopy);
+    });
+
+    return () => {
+      document.querySelectorAll('.copy-button').forEach((button) => {
+        button.removeEventListener('click', handleCopy);
+      });
+    };
+  }, []);
+
   return (
     <>
       <Layout title={title} description={excerpt} thumbnail={`https://luthfikamal-2.vercel.app/assets/thumbnails/blog/${image}`}>
@@ -53,10 +87,69 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(path.join('posts', slug + '.mdx'), 'utf-8');
+  const addLanguageLabel = () => (tree) => {
+    visit(tree, 'element', (node) => {
+      if (node.tagName === 'pre' && node.children[0].tagName === 'code') {
+        const codeNode = node.children[0];
+        const className = codeNode.properties.className || [];
+        const langClass = className.find((cn) => cn.startsWith('language-'));
+        let texts = [];
+        codeNode.children.map((child) => {
+          texts.push(child.value);
+          if (child.children) {
+            child.children.map((e) => {
+              texts.push(e.value);
+              if (e.children) {
+                e.children.map((ee) => {
+                  texts.push(ee.value);
+                });
+              }
+            });
+          }
+        });
+        if (langClass) {
+          const langName = langClass.replace('language-', '');
+          const editedLabel = langLabels.find((e) => e.original == langName);
+          node.children.unshift({
+            type: 'element',
+            tagName: 'div',
+            properties: { className: ['code-header'] },
+            children: [
+              {
+                type: 'element',
+                tagName: 'span',
+                properties: { className: ['language-label'] },
+                children: [{ type: 'text', value: editedLabel.edited }],
+              },
+              {
+                type: 'element',
+                tagName: 'button',
+                properties: { className: ['copy-button'], dataCode: texts.join('') },
+                children: [
+                  {
+                    type: 'element',
+                    tagName: 'i',
+                    properties: { className: ['bi', 'bi-clipboard'] }, // Icon for Copy
+                    children: [],
+                  },
+                  {
+                    type: 'text',
+                    value: ' Copy',
+                  },
+                ],
+              },
+            ],
+          });
+        }
+      }
+    });
+  };
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content, {
-    mdxOptions: { rehypePlugins: [rehypeHighlight] },
+    mdxOptions: {
+      rehypePlugins: [rehypeHighlight, addLanguageLabel],
+    },
   });
 
   return {
