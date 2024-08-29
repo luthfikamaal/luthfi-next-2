@@ -46,8 +46,12 @@
     font-family: 'Source Code Pro', monospace;
   }
 
-  .link-nav:hover > div h1 {
-    @apply translate-x-1 transition-all;
+  .link-nav > div {
+    transition: transform 0.3s ease;
+  }
+
+  .link-nav:hover > div {
+    transform: translateX(0.25rem);
   }
 
   .code-header {
@@ -82,11 +86,13 @@
     }
   }
 
+  /* Animasi untuk membuka modal */
   .animation-open-modal {
     opacity: 0;
     transform: translateY(-50px);
-    animation: slideInFromRight 0.3s forwards;
+    animation: slideInFromTop 0.3s forwards;
   }
+
   @keyframes slideInFromTop {
     from {
       opacity: 0;
@@ -98,21 +104,24 @@
     }
   }
 
+  /* Animasi untuk tombol membuka modal */
   .animation-button-open-modal {
     opacity: 0;
     transform: translateY(-50px);
     animation: slideInFromTop 1s forwards;
   }
 
+  /* Animasi untuk menutup modal */
   .animation-close-modal {
     opacity: 1;
-    transform: translateX(0);
-    animation: slideOutToLeft 0.3s forwards;
+    transform: translateY(0);
+    animation: slideOutToBottom 0.3s forwards;
   }
-  @keyframes slideOutToLeft {
+
+  @keyframes slideOutToBottom {
     from {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
     to {
       opacity: 0;
